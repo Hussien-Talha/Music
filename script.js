@@ -1,7 +1,7 @@
 window.onload = function() {
     // Spotify API credentials
     const clientId = 'e7874d5d05394ecd86223fd300389ef1';
-    const redirectUri = 'https://hussien-talha.github.io/Music/';
+    const redirectUri = 'https://hussien-talha.github.io/Music/music.html';
   
     // Spotify API endpoints
     const authorizeEndpoint = 'https://accounts.spotify.com/authorize';

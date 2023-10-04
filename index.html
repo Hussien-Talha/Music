@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Spotify Music Player</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <h1>Spotify Music Player</h1>
-  <button id="login-button">Log in with Spotify</button>
-  <div id="player"></div>
+  <button id="login-btn">Log in with Spotify</button>
 
-  <script src="script.js"></script>
+  <script>
+    // Replace YOUR_CLIENT_ID with your actual Spotify app's client ID
+    const clientId = 'e7874d5d05394ecd86223fd300389ef1';
+    const redirectUri = 'https://hussien-talha.github.io/Music/music.html';
+    const scope = 'user-read-currently-playing';
+
+    document.getElementById('login-btn').addEventListener('click', () => {
+      window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scope}`;
+    });
+  </script>
 </body>
 </html>
